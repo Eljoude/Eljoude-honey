@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عسل الجود | Eljoude Honey</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      background-color: #fff8f0;
+      color: #4e342e;
+    }
+    header {
+      background-color: #fbc02d;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #fff3cd;
+      padding: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #4e342e;
+      font-weight: bold;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px #000;
+      font-size: 2em;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .product {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+    .product h3 {
+      margin: 10px 0;
+    }
+    .product button {
+      background-color: #fbc02d;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    section {
+      padding: 40px;
+    }
+    #about, #contact, #order {
+      background-color: #fff3cd;
+      border-radius: 10px;
+      margin: 20px;
+      padding: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    form button {
+      background-color: #fbc02d;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff3cd;
+      margin-top: 40px;
+    }
+  </style>
+  <script>
+    function sendWhatsAppOrder(event) {
+      event.preventDefault();
+      const name = document.querySelector('[name=name]').value;
+      const phone = document.querySelector('[name=phone]').value;
+      const product = document.querySelector('[name=product]').value;
+      const quantity = document.querySelector('[name=quantity]').value;
+      const location = document.querySelector('[name=location]').value;
+      const notes = document.querySelector('[name=notes]').value;
+
+      const message = `طلب جديد من موقع عسل الجود:%0A%0Aالاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالمنتج: ${product}%0Aالكمية: ${quantity}%0Aالولاية / المدينة: ${location}%0Aملاحظات: ${notes}`;
+      const url = `https://wa.me/21696690786?text=${message}`;
+
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>عسل الجود | Eljoude Honey</h1>
+  </header>
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#products">المنتجات</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">اتصل بنا</a>
+    <a href="#order">طلب الآن</a>
+  </nav>
+  <div class="hero">
+    عسل طبيعي 100% من قلب الطبيعة
+  </div>
+  <section id="products" class="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1590080876073-8c00f6f0497d" alt="عسل سدر">
+      <h3>عسل سدر جبلي</h3>
+      <p>250 جم - 50 ريال</p>
+      <button>أضف إلى السلة</button>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1570458436416-b8fcccfe8833" alt="عسل زهور">
+      <h3>عسل زهور متنوعة</h3>
+      <p>500 جم - 70 ريال</p>
+      <button>أضف إلى السلة</button>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1630439424872-ecb88a042f2f" alt="عسل مع غذاء ملكات النحل">
+      <h3>عسل ملكي مع غذاء ملكات</h3>
+      <p>300 جم - 90 ريال</p>
+      <button>أضف إلى السلة</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>من نحن</h2>
+    <p>🌸💮 السلام عليكم، شركة <strong>الجود</strong> توفر لكم عدة أنواع عسل نحل 🐝🍯 طبيعي خاضع للتحاليل، وتوفر لكم أيضًا خلطات 🍯 طبيعية لذيذة وصحية 💮🌸</p>
+    <p>التوصيل متوفر لـ 58 ولاية، مرحباً بالجميع!</p>
+  </section>
+
+  <section id="contact">
+    <h2>اتصل بنا</h2>
+    <p>للطلبات والاستفسارات يمكنكم التواصل عبر الهاتف:</p>
+    <p><strong>0561456391</strong></p>
+  </section>
+
+  <section id="order">
+    <h2>نموذج الطلب</h2>
+    <form onsubmit="sendWhatsAppOrder(event)">
+      <label>الاسم الكامل:</label>
+      <input type="text" name="name" required>
+
+      <label>رقم الهاتف:</label>
+      <input type="tel" name="phone" required>
+
+      <label>نوع العسل المطلوب:</label>
+      <input type="text" name="product" placeholder="مثلاً: عسل سدر - 250 جم" required>
+
+      <label>الكمية:</label>
+      <input type="number" name="quantity" min="1" required>
+
+      <label>الولاية / المدينة:</label>
+      <input type="text" name="location" required>
+
+      <label>ملاحظات إضافية:</label>
+      <textarea name="notes" rows="3"></textarea>
+
+      <button type="submit">إرسال الطلب عبر واتساب</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 عسل الجود. جميع الحقوق محفوظة.
+  </footer>
+</body>
+</html>
